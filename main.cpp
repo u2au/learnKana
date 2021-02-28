@@ -9,6 +9,7 @@
 #include <ctime>
 #include <unistd.h>
 #include <vector>
+#include <stdlib.h>
 using namespace std;
 
 int main(int argc, const char * argv[]) {
@@ -88,11 +89,15 @@ int main(int argc, const char * argv[]) {
         "pa", "pi", "pu", "pe", "po"
     };
     
+    system("clear");
+    
     // Welcome
     cout << "Welcome! This is a software that allows you to review hiragana." << endl;
     sleep(3);
     cout << "If you haven't finished learning it yet, you may encounter some hiragana that you don't know during the use of this software." << endl;
-    sleep(5);
+    sleep(3);
+    cout << "By the way, you can end the review and generate a learning report by entering 'stop'." << endl;
+    sleep(3);
     
     // Beginning
     string input = "1";
@@ -106,9 +111,12 @@ int main(int argc, const char * argv[]) {
         cout << "2 > No (WITHOUT)" << endl;
         cin >> input;
 //        }
+    
+    system("clear");
+    
     // Full Version of Hiragana
         if (input == "1") {
-            for (;input != "exit";) {
+            for (;input != "stop";) {
                 int number = rand() % (46 + 25);
                 auto questionString = to_string(question);
                 auto correctAnswersString = to_string(correctAnswers);
@@ -127,11 +135,11 @@ int main(int argc, const char * argv[]) {
                 question++;
                 cin >> input;
                 if (input == hiraganaAnswer[number]) {
-                    cout << "Congratulations! Your answer is correct!" << endl;
+                    cout << "Congratulations! Your answer is correct!\n" << endl;
                     correctAnswers++;
                     
                 } else {
-                    cout << "Keep practicing! The pronunciation of " + hiragana[number] + " is " + hiraganaAnswer[number] + "!" << endl;
+                    cout << "Keep practicing! The pronunciation of " + hiragana[number] + " is " + hiraganaAnswer[number] + "!\n" << endl;
                     mistakes++;
                 }
                 // Question End
@@ -140,7 +148,7 @@ int main(int argc, const char * argv[]) {
         }
         // Easy Version of Hiragana
         else if (input == "2") {
-            for (;input != "exit";) {
+            for (;input != "stop";) {
                 int number = rand() % (46);
                 auto questionString = to_string(question);
                 auto correctAnswersString = to_string(correctAnswers);
@@ -159,24 +167,22 @@ int main(int argc, const char * argv[]) {
                 question++;
                 cin >> input;
                 if (input == hiraganaAnswer[number]) {
-                    cout << "Congratulations! Your answer is correct!" << endl;
+                    cout << "Congratulations! Your answer is correct!\n" << endl;
                     correctAnswers++;
                     
                 } else {
-                    cout << "Keep practicing! The pronunciation of " + hiragana[number] + " is " + hiraganaAnswer[number] + "!" << endl;
+                    cout << "Keep practicing! The pronunciation of " + hiragana[number] + " is " + hiraganaAnswer[number] + "!\n" << endl;
                     mistakes++;
                 }
                 // Question End
             }
-            // Easy Version of Hiragana End
-    
-    // Over
-    auto questionString = to_string(question - 2);
-    auto correctAnswersString = to_string(correctAnswers);
-            cout << "Thank you for your hard work! You answered a total of " + questionString + " questions, of which " + correctAnswersString + " were correct." << endl;
-    return 0;
-                
-            
         }
-    
-}
+            // Easy Version of Hiragana End
+            
+            // Over
+            auto questionString = to_string(question - 2);
+            auto correctAnswersString = to_string(correctAnswers);
+            cout << "Thank you for your hard work! You answered a total of " + questionString + " questions, of which " + correctAnswersString + " were correct." << endl;
+            cout << "If you have a good idea, please contact me at Discord: Rinsuki#8715." << endl;
+            return 0;
+        }
