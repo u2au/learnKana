@@ -10,20 +10,19 @@
 #include <unistd.h>
 #include <vector>
 #include <stdlib.h>
-#include <algorithm>
-// #include <iterator> // begin(), end()
-
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // Initialization
+    // 初始化
     int question = 1;
-    int correctAnswers = 0;
-    int mistakes = 0;
-    //    string mistakesArray [] = {};
-    //    string unskilled[] = {};
+    int correctAnswer = 0;
+    int wrongAnswer = 0;
+    vector <string> once;
+    vector <string> more;
+    vector <string> onceAnswer;
+    vector <string> moreAnswer;
     
-    // Dictionary
+    // 字典
     string hiragana[] = {
         // a
         "あ", "い", "う", "え", "お",
@@ -96,146 +95,127 @@ int main(int argc, const char * argv[]) {
     
     system("clear");
     
-    // Welcome
-    cout << "Welcome! This is a software that allows you to review hiragana." << endl;
+    // 欢迎
+    cout << "欢迎！这是一个可以让你复习平假名（Hiragana）的软件！" << endl;
     sleep(3);
-    cout << "If you haven't finished learning it yet, you may encounter some hiragana that you don't know during the use of this software." << endl;
+    cout << "如果你还没有学完平假名，你可能在复习过程中遇到一些不认识的平假名." << endl;
     sleep(3);
-    cout << "By the way, you can end the review and generate a learning report by entering 'stop'." << endl;
+    cout << "如果您想结束学习并生成错题报告，请输入 'stop'." << endl;
     sleep(3);
     
-    // Beginning
+    // 开始
     string input = "1";
-    cout << "Which part do you want to practice?" << endl;
-    cout << "1 > Hiragana" << endl;
-    cout << "2 > Katakana" << endl;
-    cin >> input;
-    if (input == "1") {
-        cout << "Do you want the hiragana WITH or WITHOUT the additional sounds included? Such as ば, ぴ." << endl;
+//    cout << "你想复习 Hiragana 还是 Katakana 呢？" << endl;
+//    cout << "1 > Hiragana" << endl;
+//    cout << "2 > Katakana" << endl;
+//    cin >> input;
+//    if (input == "1") {
+        cout << "你需要针对浊音以及半浊音的考察吗？例如：ば, ぴ." << endl;
         cout << "1 > Yes (WITH)" << endl;
         cout << "2 > No (WITHOUT)" << endl;
         cin >> input;
-        //        }
-        
-        system("clear");
-        
-        // Full Version of Hiragana
+//        }
+    
+    system("clear");
+    
+    // 带浊音以及半浊音的 Hiragana
         if (input == "1") {
             for (;input != "stop";) {
                 int number = rand() % (46 + 25);
                 auto questionString = to_string(question);
-                auto correctAnswersString = to_string(correctAnswers);
+                auto correctAnswertring = to_string(correctAnswer);
                 
-                // Debug Mode
-                //                cout << "\n<<< Debug Mode >>>" << endl;
-                //                cout << "Question Number: " + questionString << endl;
-                //                cout << "Correct Answers: " + correctAnswersString + "\n" << endl;
-                //                cout << question << endl;
-                //                cout << correctAnswers << endl;
-                //                cout << mistakesArray[0] << endl;
-                // Debug Mode End
-                
-                // Question
-                string tempHiragana = hiragana[number];
+                // 提问
                 cout << "Question " + questionString + ": " << endl;
-                cout << "How should " + tempHiragana + " be pronounced?" << endl;
+                cout << hiragana[number] << " 应该怎么念？" << endl;
                 question++;
                 cin >> input;
-                //                vector<string> mistakesArray;
-                //                vector<string> unskilled;
                 if (input == hiraganaAnswer[number]) {
-                    cout << "Congratulations! Your answer is correct!\n" << endl;
-                    correctAnswers++;
+                    cout << "回答正确！\n" << endl;
+                    correctAnswer++;
                     
-                    // Wrong Answer
+                } else if (input == "stop") {
+                    break;
+                    
                 } else {
-                    cout << "Keep practicing! The pronunciation of " + tempHiragana + " is " + hiraganaAnswer[number] + "!\n" << endl;
-                    mistakes++;
-                    // Categorising Mistakes (1/2+)
-                    //                    if (binary_search(mistakesArray.begin(), mistakesArray.end(), tempHiragana)) {
-                    //                        mistakesArray.push_back(tempHiragana);
-                    //                    } else {
-                    //                        unskilled.push_back(tempHiragana);
-                    //                    }
-                    //                    // Debug Mode
-                    //                    cout << tempHiragana << endl;
-                    //                    cout << mistakesArray[0] << endl;
+                    cout << "加油！" + hiragana[number] + " 的正确答案是 " + hiraganaAnswer[number] + "!\n" << endl;
+                    wrongAnswer++;
+                    // 错题记录
+                    if (find(once.begin(), once.end(), hiragana[number]) == once.end()) {
+                        once.push_back(hiragana[number]);
+                        onceAnswer.push_back(hiraganaAnswer[number]);
+                    } else {
+                        more.push_back(hiragana[number]);
+                        moreAnswer.push_back(hiraganaAnswer[number]);
+                    }
                 }
-                // Question End
+                // 问题结束
             }
             
         }
-        // Easy Version of Hiragana
+        // 不带浊音以及半浊音的 Hiragana
         else if (input == "2") {
-            for (;input != "stop";) {
+            for (;;) {
                 int number = rand() % (46);
                 auto questionString = to_string(question);
-                auto correctAnswersString = to_string(correctAnswers);
+                auto correctAnswertring = to_string(correctAnswer);
                 
-                // Debug Mode
-                //                cout << "\n<<< Debug Mode >>>" << endl;
-                //                cout << "Question Number: " + questionString << endl;
-                //                cout << "Correct Answers: " + correctAnswersString + "\n" << endl;
-                //                cout << question << endl;
-                //                cout << correctAnswers << endl;
-                //                cout << mistakesArray[0] << endl;
-                // Debug Mode End
-                
-                // Question
-                string tempHiragana = hiragana[number];
+                // 提问
                 cout << "Question " + questionString + ": " << endl;
-                cout << "How should " + tempHiragana + " be pronounced?" << endl;
+                cout << hiragana[number] << " 应该怎么念？" << endl;
                 question++;
                 cin >> input;
                 if (input == hiraganaAnswer[number]) {
-                    cout << "Congratulations! Your answer is correct!\n" << endl;
-                    correctAnswers++;
+                    cout << "回答正确！\n" << endl;
+                    correctAnswer++;
                     
-                    // Wrong Answer
+                } else if (input == "stop") {
+                    break;
+                    
                 } else {
-                    cout << "Keep practicing! The pronunciation of " + hiragana[number] + " is " + hiraganaAnswer[number] + "!\n" << endl;
-                    mistakes++;
-                    //                    vector<string> mistakesArray;
-                    //                    vector<string> unskilled;
-                    //                    // Categorising Mistakes (1/2+)
-                    //                    if (find(begin(mistakesArray), end(mistakesArray), tempHiragana) != mistakesArray.end()) {
-                    //                        mistakesArray.push_back(tempHiragana);
-                    //                    } else {
-                    //                        unskilled.push_back(tempHiragana);
-                    //                    }
-                    //                    // Debug Mode
-                    //                    cout << mistakesArray[0] << endl;
-                    //                    cout << mistakesArray[1] << endl;
-                    //                }
-                    // Question End
+                    cout << "加油！" + hiragana[number] + " 的正确答案是 " + hiraganaAnswer[number] + "!\n" << endl;
+                    wrongAnswer++;
+                    // 错题记录
+                    if (find(once.begin(), once.end(), hiragana[number]) == once.end()) {
+                        once.push_back(hiragana[number]);
+                        onceAnswer.push_back(hiraganaAnswer[number]);
+                    } else {
+                        more.push_back(hiragana[number]);
+                        moreAnswer.push_back(hiraganaAnswer[number]);
+                    }
                 }
             }
-            // Easy Version of Hiragana End
-            
-            //    // Debug Mode
-            //    cout << mistakesArray[0] << endl;
-            //    cout << "Do you need to see the hiragana that was answered incorrectly? (y/n)" << endl;
-            //    cin >> input;
-            //    if (input == "y") {
-            //        cout << "Here are the hiragana that were answered incorrectly more than once:" << endl;
-            //        vector<string> unskilled;
-            //        for (int i = 0; i < unskilled.size(); i++) {
-            //            cout << unskilled[i] << endl;
-            //
-            //        }
-            //        cout << "\nMore than twice:" << endl;
-            //        vector<string> mistakesArray;
-            //        for (int j = 0; j < mistakesArray.size(); j++) {
-            //            cout << mistakesArray[j] << endl;
-            //
-            //        }
-            //
         }
+            
         // Over
         auto questionString = to_string(question - 2);
-        auto correctAnswersString = to_string(correctAnswers);
-        cout << "Thank you for your hard work! You answered a total of " + questionString + " questions, of which " + correctAnswersString + " were correct." << endl;
-        cout << "\nIf you have a good idea, please contact me at Discord: Rinsuki#8715." << endl;
+        auto correctAnswertring = to_string(correctAnswer);
+        cout << "辛苦啦！你已经回答了 " + questionString + " 个问题，其中正确的有 " + correctAnswertring + " 个." << endl;
+        cout << "你想要看错题吗？（y/n）" << endl;
+        cin >> input;
+        if (input == "y" || input == "Y") {
+            // 检查 more 是否为空集
+            if (more.size() > 0) {
+                cout << "错过两次及以上的平假名或片假名：" << endl;
+                for (int i = 0; i < more.size(); i++) {
+                    cout << more[i] << "(" << moreAnswer[i] << ") " << endl;
+                }
+            }
+            // 错过一次的平假名或片假名
+            if (once.size() > 0) {
+                cout << "\n错过一次的平假名或片假名：" << endl;
+                for (int j = 0; j < once.size(); j++) {
+                cout << once[j] << "(" << onceAnswer[j] << ") " << endl;
+                }
+            }
+            // 如果没有错题并且答题数不为 0 的话
+            if (more.size() == 0 && once.size() == 0 && question > 0 && wrongAnswer == 0) {
+                cout << "厉害了！你回答了 " << questionString << " 道题，而且完全没有错误！" << endl;
+            } else if (wrongAnswer/question >= 0.5) {
+                cout << "还需要多多练习哦！加油！" << endl;
+            }
+        }
+        cout << "如果你有任何好的想法，欢迎交流！QQ：1090356836." << endl;
         return 0;
-    }
-}
+        }
+//}
