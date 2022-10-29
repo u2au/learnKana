@@ -116,9 +116,6 @@ public class Process
                 // Get user input
                 input = getInput.nextLine();
 
-                // Get the answer
-                System.out.println("DEBUG");
-
                 // Check if user wants to end the program
                 if (!Objects.equals(input, "stop"))
                 {
