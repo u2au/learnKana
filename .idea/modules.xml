@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/learn-hiragana.iml" filepath="$PROJECT_DIR$/learn-hiragana.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learnKana.iml" filepath="$PROJECT_DIR$/learnKana.iml" />
     </modules>
   </component>
 </project>
