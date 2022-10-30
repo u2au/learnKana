@@ -8,8 +8,8 @@ public class Menu
     protected void showMsg()
     {
         System.out.println("""
-                Welcome! It's a program helps you memorize hiragana!
-                We suggest you finishing learning all the hiragana before using the program.
+                Welcome! It's a program helps you memorize kana!
+                We suggest you finishing learning all the hiragana or katakana before using the program.
                 You may type 'stop' to end.
                 - Press ENTER to select a mode -""");
 
