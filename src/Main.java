@@ -1,7 +1,5 @@
 public class Main {
 
-    int selectedMode = 0;
-
     public static void main(String[] args)
     {
         Menu m = new Menu();

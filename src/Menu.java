@@ -7,10 +7,11 @@ public class Menu
     // Welcoming messages
     protected void showMsg()
     {
-        System.out.println("Welcome! It's a program helps you memorize hiragana!\n" +
-                           "We suggest you finishing learning all the hiragana before using the program.\n" +
-                           "You may type 'stop' to end.\n" +
-                           "- Press ENTER to select a mode -");
+        System.out.println("""
+                Welcome! It's a program helps you memorize hiragana!
+                We suggest you finishing learning all the hiragana before using the program.
+                You may type 'stop' to end.
+                - Press ENTER to select a mode -""");
 
         getInput.nextLine();
 
@@ -20,15 +21,19 @@ public class Menu
     protected int selectMode()
     {
 
-        System.out.println("Currently, we have 2 options for memorizing hiragana:\n" +
-                           "Press 1 - All hiragana\n" +
-                           "Press 2 - Hiragana without voiced and voiceless sound like ぶ、ぷ");
+        System.out.println("""
+                Currently, we have 4 options for memorizing kana:
+                Press 1 - All hiragana
+                Press 2 - Hiragana without voiced and voiceless sound like ぶ、ぷ
+                Press 3 - All katakana
+                Press 4 - Katakana without voiced and voiceless sound like ブ、プ
+                """);
 
         // Input validation
         String mode = getInput.nextLine();
-        while (Integer.parseInt(mode) != 1 && Integer.parseInt(mode) != 2)
+        while (Integer.parseInt(mode) != 1 && Integer.parseInt(mode) != 2 && Integer.parseInt(mode) != 3 && Integer.parseInt(mode) != 4)
         {
-            System.out.println("Invalid input. Please type 1 or 2 to continue the program.");
+            System.out.println("Invalid input. Please type 1/2/3/4 to continue the program.");
             mode = getInput.nextLine();
         }
 
