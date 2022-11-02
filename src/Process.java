@@ -128,10 +128,118 @@ public class Process
     String[] wrongKana = new String[71];
     String[] wrongPronunciation = new String[71];
 
+    // Initialization
+    String input = "test";
+    short wrongNum;
+    boolean cont = true;
+
     // Check if one kana had been added to array before
-    protected boolean checkArr(String input)
+    private boolean checkArr(String input)
     {
         return (Arrays.asList(wrongPronunciation).contains(input));
+    }
+
+    // Generate a random number
+    private short getNum(short largest) { return ((short)(Math.random() * largest)); }
+
+    // Check whether the pronunciation is correct
+    private boolean checkKana(char type, short num)
+    {
+        // For hiragana
+        if (type == 'h')
+        {
+            // Question
+            System.out.println("How to pronounce " + hiragana[num] + "?");
+
+            // Get user input
+            input = getInput.nextLine();
+
+            // Check if user wants to end the program
+            if (!Objects.equals(input, "stop")) {
+
+                // Check if user input is correct
+                if (Objects.equals(input, kanaAnswer[num])) System.out.print("Correct!\n" +
+                        "- Press ENTER to continue -\n");
+
+                    // If user input is incorrect
+                else {
+                    if (!checkArr(kanaAnswer[num])) // If the hiragana does not exist in the array
+                    {
+                        wrongKana[wrongNum] = hiragana[num];
+                        wrongPronunciation[wrongNum++] = kanaAnswer[num];
+                    } else System.out.println("You have answered the hiragana wrong before.");
+
+                    // Show the hiragana and its correct pronunciation
+                    System.out.print("The correct pronunciation for " +
+                            hiragana[num] + " is " + kanaAnswer[num] + ".\n" +
+                            "- Press ENTER to continue -\n");
+
+                }
+            }
+            // End the program
+            else return false;
+
+            // Ask for input
+            input = getInput.nextLine();
+
+            // Check if user wants to end the program
+            if (Objects.equals(input, "stop")) return false;
+            else return true;
+        }
+
+        // For katakana
+        else if (type == 'k')
+        {
+            // Question
+            System.out.println("How to pronounce " + katakana[num] + "?");
+
+            // Get user input
+            input = getInput.nextLine();
+
+            // Check if user wants to end the program
+            if (!Objects.equals(input, "stop"))
+            {
+                // Check if user input is correct
+                if (Objects.equals(input, kanaAnswer[num])) System.out.print("Correct!\n");
+
+                // If user input is incorrect
+                else
+                {
+                    if (!checkArr(kanaAnswer[num])) // If the katakana does not exist in the array
+                    {
+                        wrongKana[wrongNum] = katakana[num];
+                        wrongPronunciation[wrongNum++] = kanaAnswer[num];
+                    }
+
+                    else System.out.println("You have answered the katakana wrong before.");
+
+                    // Show the katakana and its correct pronunciation
+                    System.out.print("The correct pronunciation for " +
+                            katakana[num] + " is " + kanaAnswer[num] + ".\n" +
+                            "- Press ENTER to continue -\n");
+
+                    input = getInput.nextLine();
+
+                    // Continue
+                    return true;
+
+                }
+
+            }
+
+            // End the practice
+            else return false;
+
+            // Ask for input
+            input = getInput.nextLine();
+
+            // Check if user wants to end the program
+            if (Objects.equals(input, "stop")) return false;
+            else return true;
+        }
+
+        // Error
+        return false;
     }
 
     // Process
@@ -139,195 +247,52 @@ public class Process
     {
         // Initialization
         String input = "test";
-        int wrongNum = 0;
+        short num = -1;
 
-        // Mode 1 - All hiragana
-        if (mode == 1)
+        // Process
+        switch (mode)
         {
-            // Generate random index number for kana vocabulary
-            while (!input.equals("stop"))
-            {
-                short num = (short)(Math.random() * 71); // From 0-70, (max 70 - min 0 + 1) + min 0 = 71
-
-                // Question
-                System.out.println("How to pronounce " + hiragana[num] + "?");
-
-                // Get user input
-                input = getInput.nextLine();
-
-                // Check if user wants to end the program
-                if (!Objects.equals(input, "stop"))
+            // Mode 1 - All hiragana
+            case 1:
+                while (cont)
                 {
-                    // Check if user input is correct
-                    if (Objects.equals(input, kanaAnswer[num])) System.out.println("Correct!\n");
-
-                        // If user input is incorrect
-                    else
-                    {
-                        if (!checkArr(kanaAnswer[num])) // If the hiragana does not exist in the array
-                        {
-                            wrongKana[wrongNum] = hiragana[num];
-                            wrongPronunciation[wrongNum++] = kanaAnswer[num];
-                        }
-
-                        else System.out.println("You have answered the hiragana wrong before.");
-
-                        // Show the hiragana and its correct pronunciation
-                        System.out.print("The correct pronunciation for " +
-                                hiragana[num] + " is " + kanaAnswer[num] + ".\n" +
-                                "- Press ENTER to continue -\n");
-
-                        input = getInput.nextLine();
-
-                    }
-
+                    num = getNum((short)71); // From 0-70, (max 70 - min 0 + 1) + min 0 = 71
+                    cont = checkKana('h', num);
                 }
+                break;
 
-
-            }
-
-        }
-        // Mode 1 END
-
-        // Mode 2 - Hiragana without voiced and voiceless sound
-        else if (mode == 2)
-        {
-            // Generate random index number for kana vocabulary
-            while (!input.equals("stop"))
-            {
-                short num = (short)(Math.random() * 46); // From 0-45, (max 45 - min 0 + 1) + min 0 = 46
-
-                // Question
-                System.out.println("How to pronounce " + hiragana[num] + "?");
-
-                // Get answer and user input
-                input = getInput.nextLine();
-
-                // Check if user wants to end the program
-                if (!Objects.equals(input, "stop"))
+            // Mode 2 - Hiragana without voiced and voiceless sound
+            case 2:
+                while (cont)
                 {
-                    // Check if user input is correct
-                    if (Objects.equals(input, kanaAnswer[num])) System.out.println("Correct!\n");
-
-                        // If user input is incorrect
-                    else
-                    {
-                        if (!checkArr(kanaAnswer[num])) // If the hiragana does not exist in the array
-                        {
-                            wrongKana[wrongNum] = hiragana[num];
-                            wrongPronunciation[wrongNum++] = kanaAnswer[num];
-                        }
-
-                        else System.out.println("You have answered the hiragana wrong before.");
-
-                        // Show the hiragana and its correct pronunciation
-                        System.out.print("The correct pronunciation for " +
-                                hiragana[num] + " is " + kanaAnswer[num] + ".\n" +
-                                "- Press ENTER to continue -\n");
-
-                        input = getInput.nextLine();
-
-                    }
-
+                    num = getNum((short)46); // From 0-70, (max 70 - min 0 + 1) + min 0 = 71
+                    cont = checkKana('h', num);
                 }
+                break;
 
-            }
-        }
-        // Mode 2 END
-
-        // Mode 3 - All katakana
-        if (mode == 3)
-        {
-            // Generate random index number for kana vocabulary
-            while (!input.equals("stop"))
-            {
-                short num = (short)(Math.random() * 71); // From 0-70, (max 70 - min 0 + 1) + min 0 = 71
-
-                // Question
-                System.out.println("How to pronounce " + katakana[num] + "?");
-
-                // Get user input
-                input = getInput.nextLine();
-
-                // Check if user wants to end the program
-                if (!Objects.equals(input, "stop"))
+            // Mode 3 - All katakana
+            case 3:
+                while (cont)
                 {
-                    // Check if user input is correct
-                    if (Objects.equals(input, kanaAnswer[num])) System.out.println("Correct!\n");
-
-                        // If user input is incorrect
-                    else
-                    {
-                        if (!checkArr(kanaAnswer[num])) // If the katakana does not exist in the array
-                        {
-                            wrongKana[wrongNum] = katakana[num];
-                            wrongPronunciation[wrongNum++] = kanaAnswer[num];
-                        }
-
-                        else System.out.println("You have answered the katakana wrong before.");
-
-                        // Show the katakana and its correct pronunciation
-                        System.out.print("The correct pronunciation for " +
-                                katakana[num] + " is " + kanaAnswer[num] + ".\n" +
-                                "- Press ENTER to continue -\n");
-
-                        input = getInput.nextLine();
-
-                    }
-
+                    num = getNum((short)(71)); // From 0-70, (max 70 - min 0 + 1) + min 0 = 71
+                    cont = checkKana('k', num);
                 }
+                break;
 
-
-            }
-
-        }
-        // Mode 4 - Katakana without voiced and voiceless sound
-        else if (mode == 4)
-        {
-            // Generate random index number for kana vocabulary
-            while (!input.equals("stop"))
-            {
-                short num = (short)(Math.random() * 46); // From 0-45, (max 45 - min 0 + 1) + min 0 = 46
-
-                // Question
-                System.out.println("How to pronounce " + katakana[num] + "?");
-
-                // Get answer and user input
-                input = getInput.nextLine();
-
-                // Check if user wants to end the program
-                if (!Objects.equals(input, "stop"))
+            // Mode 4 - Katakana without voiced and voiceless sound
+            case 4:
+                while (cont)
                 {
-                    // Check if user input is correct
-                    if (Objects.equals(input, kanaAnswer[num])) System.out.println("Correct!\n");
-
-                        // If user input is incorrect
-                    else
-                    {
-                        if (!checkArr(kanaAnswer[num])) // If the katakana does not exist in the array
-                        {
-                            wrongKana[wrongNum] = katakana[num];
-                            wrongPronunciation[wrongNum++] = kanaAnswer[num];
-                        }
-
-                        else System.out.println("You have answered the katakana wrong before.");
-
-                        // Show the katakana and its correct pronunciation
-                        System.out.print("The correct pronunciation for " +
-                                katakana[num] + " is " + kanaAnswer[num] + ".\n" +
-                                "- Press ENTER to continue -\n");
-
-                        input = getInput.nextLine();
-
-                    }
-
+                    num = getNum((short)(46)); // From 0-70, (max 70 - min 0 + 1) + min 0 = 71
+                    cont = checkKana('k', num);
                 }
+                break;
 
-            }
+            // Other situations
+            default:
+                System.out.println("Sorry, there is something wrong with the program. Please contact us.\n");
+                break;
         }
-
-        // Other situations
-        else System.out.println("Sorry, there is something wrong with the program. Please contact the developer.");
 
         // Summary
 
@@ -345,7 +310,8 @@ public class Process
 
         // If user did not make any mistake
         else System.out.println("Wow! You answered all kana correctly!\n" +
-                                "Thank you for using!");
+                "Thank you for using!");
 
     }
 }
+
