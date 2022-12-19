@@ -17,7 +17,7 @@ I would appreciate it if u give a star on the repo :)
 
 Assume you already have an IDE executes Java, you may use /src/Main.java to start the program.
 
-Opening the whole repo folder with intelliJ IDEA helps you get started with the project more conveniently.
+Opening the whole repo folder with <b>intelliJ IDEA</b> helps you get started with the project more conveniently.
 
 <br/>
 
