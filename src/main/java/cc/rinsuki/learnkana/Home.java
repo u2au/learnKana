@@ -11,9 +11,10 @@ public class Home extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Home.class.getResource("Home.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 335, 600);
+        stage.setTitle("learnKana");
         stage.setScene(scene);
+        stage.setResizable(false); // Disable window size adjusting
         stage.show();
     }
 
