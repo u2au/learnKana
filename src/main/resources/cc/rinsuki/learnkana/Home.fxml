@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.Home">
+   <children>
+      <GridPane layoutX="74.0" layoutY="204.0" prefHeight="600.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="196.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="501.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="65.0" minHeight="2.0" prefHeight="37.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;">
+               <children>
+                  <Label alignment="CENTER" layoutX="153.0" layoutY="18.0" prefHeight="53.0" prefWidth="335.0" text="learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Apple Chancery" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Start! スタート!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Tahoma" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                <RowConstraints maxHeight="140.39361572265625" minHeight="10.0" prefHeight="122.35745239257812" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="133.5" minHeight="0.0" prefHeight="13.642547607421875" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="317.0" minHeight="0.0" prefHeight="16.65313720703125" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="343.4326171875" minHeight="0.0" prefHeight="343.34686279296875" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="68.0" layoutY="17.0" scaleX="1.8" scaleY="1.8" scaleZ="1.8">
+                           <image>
+                              <Image url="@img/welcome.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="335.0" text="Let's review kana by typing its pronunciation!" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="335.0" text="Kindly select your desirable review mode." GridPane.rowIndex="3" />
+                  <GridPane GridPane.rowIndex="4">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="171.5" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="310.5" minHeight="0.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="310.5" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="310.5" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="224.0" text="Hiragana">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="167.0" text="Katakana" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane prefHeight="92.0" prefWidth="168.0" GridPane.rowIndex="1">
+                           <children>
+                              <Button layoutX="81.0" layoutY="67.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <graphic>
+                                      <ImageView fitHeight="130" fitWidth="130" GridPane.rowIndex="1">
+                                          <image>
+                                              <Image url="@img/Hiragana.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <graphic>
+                                      <ImageView fitHeight="130" fitWidth="130" GridPane.rowIndex="1">
+                                          <image>
+                                              <Image url="@img/Katakana.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="224.0" text="Hiragana with Voiced Sounds" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="224.0" text="Katakana with Voiced Sounds" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button layoutX="32.0" layoutY="44.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <graphic>
+                                      <ImageView fitHeight="130" fitWidth="130">
+                                          <image>
+                                              <Image url="@img/KatakanaVS.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <graphic>
+                                      <ImageView fitHeight="130" fitWidth="130">
+                                          <image>
+                                              <Image url="@img/HiraganaVS.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
