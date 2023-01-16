@@ -99,7 +99,7 @@
                                        <children>
                                           <ImageView fitHeight="212.0" fitWidth="335.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../../../../pictures%20and%20files/719179.png" />
+                                                <Image url="@img/banner.png" />
                                              </image>
                                              <effect>
                                                 <Lighting>
