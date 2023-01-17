@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.Home">
+<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.SceneController">
    <children>
       <GridPane layoutX="74.0" layoutY="204.0" prefHeight="600.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -34,9 +34,9 @@
             </AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Start! スタート!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Github: rinsukiyo/learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
-                        <Font name="Tahoma" size="20.0" />
+                        <Font name="Tahoma" size="17.0" />
                      </font>
                   </Button>
                </children>
@@ -63,7 +63,7 @@
                      </children>
                   </Pane>
                   <Label alignment="CENTER" prefHeight="28.0" prefWidth="335.0" text="Let's review kana by typing its pronunciation!" GridPane.rowIndex="2" />
-                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="335.0" text="Kindly select your desirable review mode." GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="335.0" text="Kindly click your desirable review mode." GridPane.rowIndex="3" />
                   <GridPane GridPane.rowIndex="4">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -88,7 +88,7 @@
                         </Label>
                         <AnchorPane prefHeight="92.0" prefWidth="168.0" GridPane.rowIndex="1">
                            <children>
-                              <Button layoutX="81.0" layoutY="67.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Button layoutX="81.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                   <graphic>
                                       <ImageView fitHeight="130" fitWidth="130" GridPane.rowIndex="1">
                                           <image>
@@ -101,7 +101,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonTwo" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                   <graphic>
                                       <ImageView fitHeight="130" fitWidth="130" GridPane.rowIndex="1">
                                           <image>
@@ -124,7 +124,7 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <Button layoutX="32.0" layoutY="44.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Button layoutX="32.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleButtonFour" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                   <graphic>
                                       <ImageView fitHeight="130" fitWidth="130">
                                           <image>
@@ -137,7 +137,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                            <children>
-                              <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleButtonThree" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                   <graphic>
                                       <ImageView fitHeight="130" fitWidth="130">
                                           <image>
