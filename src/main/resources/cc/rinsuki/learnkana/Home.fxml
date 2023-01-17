@@ -34,10 +34,17 @@
             </AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Github: rinsukiyo/learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Tahoma" size="17.0" />
                      </font>
+                     <graphic>
+                        <Label fx:id="startButton" alignment="CENTER" prefHeight="41.0" prefWidth="335.0" text="Please choose one review mode." textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </graphic>
                   </Button>
                </children>
             </AnchorPane>
@@ -90,7 +97,7 @@
                            <children>
                               <Button layoutX="81.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                   <graphic>
-                                      <ImageView fitHeight="130" fitWidth="130" GridPane.rowIndex="1">
+                                      <ImageView fitHeight="130" fitWidth="130" onMouseClicked="#handleButtonOne" GridPane.rowIndex="1">
                                           <image>
                                               <Image url="@img/Hiragana.png" />
                                           </image>

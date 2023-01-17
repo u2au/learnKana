@@ -56,7 +56,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                      <children>
-                        <Label alignment="CENTER" layoutX="169.0" layoutY="99.0" prefHeight="246.0" prefWidth="335.0" text="あ" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="kanaLabel" alignment="CENTER" layoutX="169.0" layoutY="99.0" prefHeight="246.0" prefWidth="335.0" text="^ ^" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font size="200.0" />
                            </font>
@@ -65,12 +65,12 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
                      <children>
-                        <TextField alignment="CENTER" layoutX="24.0" prefHeight="29.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <TextField fx:id="input" alignment="CENTER" layoutX="24.0" onAction="#reviewKana" prefHeight="29.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="71.0" prefWidth="335.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="127.0" layoutY="6.0" prefHeight="46.0" prefWidth="335.0" text="Hiragana with Voiced Sounds" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="numOfAnsLabel" alignment="CENTER" layoutX="127.0" layoutY="6.0" prefHeight="46.0" prefWidth="335.0" text="No.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font size="21.0" />
                            </font>
@@ -79,9 +79,9 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
                      <children>
-                        <Label alignment="CENTER" layoutX="160.0" layoutY="20.0" prefHeight="56.0" prefWidth="335.0" text="Incorrect. The answer is:" textFill="#bf0f0f" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="ansFeedbackLabel" alignment="CENTER" layoutX="160.0" layoutY="20.0" prefHeight="56.0" prefWidth="335.0" text="Please press ENTER to jump to next kana." textFill="#000000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="17.0" />
                            </font>
                         </Label>
                      </children>
@@ -89,7 +89,7 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
                      <children>
                         <Label layoutX="153.0" layoutY="33.0" />
-                        <Label alignment="CENTER" layoutX="146.0" layoutY="33.0" prefHeight="99.0" prefWidth="335.0" text="a" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="kanaAnsLabel" alignment="CENTER" layoutX="146.0" layoutY="33.0" prefHeight="99.0" prefWidth="335.0" text=" " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font size="40.0" />
                            </font>
@@ -110,6 +110,7 @@
             <GridPane GridPane.rowIndex="2">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
@@ -118,7 +119,16 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="57.0" layoutY="18.0" mnemonicParsing="false" onAction="#switchToReportScene" prefHeight="60.0" prefWidth="168.0" style="-fx-background-color: #137A7F; -fx-background-radius: 30;" text="Finish!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Button layoutX="57.0" layoutY="18.0" mnemonicParsing="false" onAction="#showAns" prefHeight="60.0" prefWidth="168.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Check!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <Button layoutX="14.0" mnemonicParsing="false" onAction="#reviewKana" prefHeight="60.0" prefWidth="182.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Next!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -127,7 +137,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button layoutX="14.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="182.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Next!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Button layoutX="29.0" layoutY="18.0" mnemonicParsing="false" onAction="#switchToReportScene" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Finish!" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font size="23.0" />
                            </font>
