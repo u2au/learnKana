@@ -6,20 +6,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class SceneController {
 
     // Initialization
     @FXML
-    Label startButton, numOfAnsLabel, kanaLabel, kanaAnsLabel, ansFeedbackLabel;
+    Label startButton, numOfAnsLabel, kanaLabel, kanaAnsLabel, ansFeedbackLabel, wrongKanaLabel, questionLabel;
 
-    private static int mode, numOfKana, numOfAns = 0;
+    private static int mode, numOfKana, numOfAns = 0, numOfWrongKana = 0;
+
+    private static boolean existedKana = false;
 
     private static short whichKana,
                          firstKana = 1;
@@ -29,9 +33,14 @@ public class SceneController {
                    inputAns,
                    lastKana,
                    lastKanaAns,
-                   feedbackText;
+                   feedbackText,
+                   wrongKanaLabelText = "";
 
     @FXML private TextField input;
+    @FXML private Button nextButton, checkButton;
+
+    String[] wrongKana = new String[71];
+    String[] wrongPronunciation = new String[71];
 
     private String[] kanaAnswer = {
             // a
@@ -148,12 +157,79 @@ public class SceneController {
             // Voiceless and voiced katakana END
     };
 
+    // Check if one kana had been added to array before
+    private boolean checkArr(String k)
+    {
+        return (Arrays.asList(wrongKana).contains(k));
+    }
+
+    // Check if kana pronunciation is correct
+    private void checkKana(String kp)
+    {
+//        // If incorrect
+//        if (!kp.equals(kanaAnswer[whichKana]))
+//        {
+            // Get kana and check if kana exists
+            if (mode == 1 || mode == 3) // Hiragana
+            {
+                // If kana not exist
+                if (!checkArr(hiragana[whichKana]))
+                {
+                    wrongKana[numOfWrongKana] = hiragana[whichKana];
+                    System.out.println(wrongKana[numOfWrongKana] + " " + hiragana[whichKana]); // DEBUG
+
+                }
+
+                else existedKana = true;
+            }
+
+            else // Katakana
+            {
+                // If kana not exist
+                if (!checkArr(katakana[whichKana]))
+                {
+                    wrongKana[numOfWrongKana] = katakana[whichKana];
+                }
+
+                else existedKana = true;
+            }
+            // Get kana and check if kana exists END
+
+//        }
+
+        if (!existedKana)
+        {
+            wrongPronunciation[numOfWrongKana] = kanaAnswer[whichKana];
+            System.out.println(wrongPronunciation[numOfWrongKana] + " " + kanaAnswer[whichKana]); // DEBUG
+
+            // Check if exceed max num of wrong kana
+            // Need modification
+            if (numOfWrongKana >= 15)
+            {
+                firstKana = 1;
+            }
+
+            else
+            {
+                // Save kana and pronunciation information
+                System.out.println(wrongKana[numOfWrongKana] + wrongPronunciation[numOfWrongKana]); // DEBUG
+                wrongKanaLabelText += (wrongKana[numOfWrongKana] + " (" + wrongPronunciation[numOfWrongKana++] + ")\n");
+                System.out.println(wrongKana[numOfWrongKana] + wrongPronunciation[numOfWrongKana]); // DEBUG
+
+            }
+        }
+
+        existedKana = false; // Restore existing status
+
+    }
+    // Check if kana pronunciation is correct END
+
+
     // Review Kana
     @FXML
     private void reviewKana()
     {
-        numOfAnsLabel.setText(("No." + String.valueOf(++numOfAns))); // Numbering of Kana
-
+        // Check corrective of last kana
         switch (firstKana)
         {
             case 0:
@@ -162,6 +238,7 @@ public class SceneController {
                 {
                     feedbackText = "Incorrect. Answer for " + kana + " is " + kanaAnswer[whichKana] + ".";
                     ansFeedbackLabel.setText(feedbackText);
+                    checkKana(input.getText());
                 }
 
                 else {
@@ -172,25 +249,57 @@ public class SceneController {
                 break;
 
             case 1:
+                // Set as default
                 ansFeedbackLabel.setText("");
+                numOfWrongKana = 0;
                 firstKana = 0;
+                numOfAns = 0;
+                questionLabel.setText("What is the pronunciation for this kana?");
+                ansFeedbackLabel.setText("Please press ENTER to jump to next kana.");
+                nextButton.setDisable(false);
+                checkButton.setDisable(false);
+
                 break;
 
             default:
                 break;
 
         }
+        // Check corrective of last kana END
 
-        whichKana = (short)(Math.random() * numOfKana); // Generate random num
+        // End the review
+        if (numOfWrongKana >= 15)
+        {
+            nextButton.setDisable(true);
+            questionLabel.setText("So far, there are 15 kana errors.");
+            ansFeedbackLabel.setText("Let's click 'Finish!' to see your report!");
+        }
 
-        if (mode == 1 || mode == 3) kana = hiragana[whichKana];
-        else kana = katakana[whichKana];
+        // Continue reviewing
+        else
+        {
+            kanaAnsLabel.setText(""); // Set as default
+            numOfAnsLabel.setText(("No." + String.valueOf(++numOfAns))); // Numbering of Kana
+            whichKana = (short)(Math.random() * numOfKana); // Generate random num
+            kanaAns = kanaAnswer[whichKana]; // Set answer
 
-        // Answer
-        kanaAns = kanaAnswer[whichKana];
-        kanaLabel.setText(kana);
+            if (mode == 1 || mode == 3)
+            {
+                kana = hiragana[whichKana];
+            }
 
-        System.out.println(mode + " " + numOfKana + " " + kana + " " + kanaAns);
+            else
+            {
+                kana = katakana[whichKana];
+            }
+
+            // Display new kana
+            kanaLabel.setText(kana);
+
+            System.out.println(mode + " " + numOfKana + " " + kana + " " + kanaAns); // DEBUG
+        }
+
+
 
     }
     // Review Kana END
@@ -223,6 +332,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        firstKana = 1; // Set as default
         stage.show();
     }
 
@@ -247,23 +357,33 @@ public class SceneController {
     private void handleButtonOne()
     {
         setMode(1, 46, "Hiragana");
+        startButton.setDisable(false);
     }
 
     @FXML
     private void handleButtonTwo() {
-        setMode(2, 71, "Katakana");
+        setMode(2, 46, "Katakana");
+        startButton.setDisable(false);
     }
 
     @FXML
     private void handleButtonThree() {
-        setMode(3, 46, "Hiragana with Voiced Sounds");
+        setMode(3, 71, "Hiragana with Voiced Sounds");
+        startButton.setDisable(false);
     }
 
     @FXML
     private void handleButtonFour() {
         setMode(4, 71, "Katakana with Voiced Sounds");
+        startButton.setDisable(false);
     }
 
-
+    @FXML
+    private void generateReport()
+    {
+        wrongKanaLabel.setText(wrongKanaLabelText);
+        System.out.println(wrongKanaLabelText); // DEBUG
+        wrongKanaLabelText = "";
+    }
 
 }

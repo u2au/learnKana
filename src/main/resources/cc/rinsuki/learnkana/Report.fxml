@@ -22,7 +22,7 @@
           <RowConstraints maxHeight="65.0" minHeight="2.0" prefHeight="37.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E12885; -fx-background-radius: 30;">
                <children>
                   <Label alignment="CENTER" layoutX="153.0" layoutY="18.0" prefHeight="53.0" prefWidth="335.0" text="learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
@@ -31,54 +31,70 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-               <children>
-                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Return home!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Tahoma" size="20.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
             <GridPane GridPane.rowIndex="1">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="323.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="223.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="319.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <AnchorPane prefHeight="132.0" prefWidth="335.0">
+                  <AnchorPane prefHeight="137.0" prefWidth="335.0">
                      <children>
-                        <ImageView fitHeight="181.0" fitWidth="240.0" layoutX="57.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="143.0" fitWidth="181.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@img/thankyou.png" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                     <children>
-                        <Label alignment="CENTER" layoutX="153.0" layoutY="52.0" prefHeight="78.0" prefWidth="335.0" text="Here is your kana review report!" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <Label alignment="CENTER" layoutX="153.0" layoutY="44.0" prefHeight="222.0" prefWidth="335.0" text="(Wrong Kana)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="91.0" layoutY="56.0" prefHeight="316.0" prefWidth="335.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+                  <AnchorPane prefHeight="32.0" prefWidth="335.0" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="342.0" text="Click 'Report' to generate your kana report!" textAlignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="57.0" layoutY="2.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Report" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button layoutX="40.0" layoutY="2.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="41.0" prefWidth="167.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Return Home!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
                </children>
             </GridPane>
          </children>

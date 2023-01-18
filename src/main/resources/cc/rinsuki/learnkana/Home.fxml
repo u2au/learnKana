@@ -39,7 +39,7 @@
                         <Font name="Tahoma" size="17.0" />
                      </font>
                      <graphic>
-                        <Label fx:id="startButton" alignment="CENTER" prefHeight="41.0" prefWidth="335.0" text="Please choose one review mode." textAlignment="CENTER" textFill="WHITE">
+                        <Label fx:id="startButton" alignment="CENTER" disable="true" prefHeight="41.0" prefWidth="335.0" text="Please choose one review mode first." textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
