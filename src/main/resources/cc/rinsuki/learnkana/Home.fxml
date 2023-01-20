@@ -7,71 +7,51 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.SceneController">
+<AnchorPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: 、;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.SceneController">
    <children>
-      <GridPane layoutX="74.0" layoutY="204.0" prefHeight="600.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="600.0" prefWidth="346.0" style="-fx-background-color: #39C5BB;">
+         <children>
+            <Label layoutX="108.0" layoutY="62.0" />
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="23.0" layoutY="42.0" prefHeight="524.0" prefWidth="299.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 40;" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="42.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="196.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="501.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="65.0" minHeight="2.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="196.0" minHeight="0.0" prefHeight="13.399999999999999" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="555.0" minHeight="0.0" prefHeight="41.99999999999999" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="24.400000000000006" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="288.99998168945314" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="555.0" minHeight="4.199951171875" prefHeight="23.39996337890625" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="88.0" minHeight="2.0" prefHeight="58.60003662109375" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-               <children>
-                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Tahoma" size="17.0" />
-                     </font>
-                     <graphic>
-                        <Label fx:id="startButton" alignment="CENTER" disable="true" prefHeight="18.0" prefWidth="290.0" text="Please choose one review mode first." textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <GridPane GridPane.rowIndex="1">
+            <AnchorPane prefHeight="88.0" prefWidth="294.0" style="-fx-background-radius: 40;" GridPane.rowIndex="5" />
+            <GridPane prefHeight="325.0" prefWidth="286.0" GridPane.rowIndex="3">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints />
-                <RowConstraints maxHeight="140.39361572265625" minHeight="10.0" prefHeight="122.35745239257812" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="133.5" minHeight="0.0" prefHeight="13.642547607421875" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="317.0" minHeight="0.0" prefHeight="16.65313720703125" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="343.4326171875" minHeight="0.0" prefHeight="343.34686279296875" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="140.39361572265625" minHeight="10.0" prefHeight="19.199993896484372" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="485.6000061035156" minHeight="0.0" prefHeight="485.6000061035156" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                     <children>
-                        <ImageView fitHeight="74.0" fitWidth="190.0" layoutX="76.0" layoutY="25.0" scaleX="1.8" scaleY="1.8" scaleZ="1.8">
-                           <image>
-                              <Image url="@img/welcome.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Label alignment="CENTER" prefHeight="38.0" prefWidth="335.0" text="Let's review kana by typing its pronunciation!" GridPane.rowIndex="2" />
-                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="335.0" text="Kindly click your desirable review mode." GridPane.rowIndex="3" />
-                  <GridPane GridPane.rowIndex="4">
+                  <GridPane GridPane.rowIndex="2">
                     <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.20001220703125" minWidth="10.0" prefWidth="175.20001220703125" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.5999755859375" minWidth="10.0" prefWidth="160.79998779296875" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints maxHeight="171.5" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="310.5" minHeight="0.0" prefHeight="140.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="310.5" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="310.5" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="171.5" minHeight="0.0" prefHeight="47.19999160766602" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="310.5" minHeight="0.0" prefHeight="122.400008392334" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="310.5" minHeight="10.0" prefHeight="53.00001831054689" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="310.5" minHeight="10.0" prefHeight="106.5999816894531" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="310.5" minHeight="0.0" prefHeight="42.59997558593747" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label alignment="CENTER" prefHeight="17.0" prefWidth="224.0" text="Hiragana">
@@ -84,22 +64,19 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <AnchorPane prefHeight="92.0" prefWidth="168.0" GridPane.rowIndex="1">
+                        <AnchorPane prefHeight="186.0" prefWidth="171.0" GridPane.rowIndex="1">
                            <children>
-                              <Button layoutX="43.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
-                                  <graphic>
-                                      <ImageView fitHeight="102.0" fitWidth="100.0" onMouseClicked="#handleButtonOne" GridPane.rowIndex="1">
-                                          <image>
-                                              <Image url="@img/Hiragana.png" />
-                                          </image>
-                                      </ImageView>
-                                  </graphic>
-                              </Button>
+                              <Button layoutY="45.0" mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="45.0" />
+                                <ImageView fitHeight="102.0" fitWidth="103.0" layoutX="26.0" layoutY="8.0" onMouseClicked="#handleButtonOne">
+                                    <image>
+                                        <Image url="@img/Hiragana.png" />
+                                    </image>
+                                </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="170.0" prefWidth="196.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonTwo" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonTwo" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                   <graphic>
                                       <ImageView fitHeight="101.0" fitWidth="106.0" GridPane.rowIndex="1">
                                           <image>
@@ -110,19 +87,9 @@
                               </Button>
                            </children>
                         </AnchorPane>
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="224.0" text="Hiragana with Voiced Sounds" GridPane.rowIndex="3">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="224.0" text="Katakana with Voiced Sounds" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#handleButtonFour" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                              <Button layoutX="2.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleButtonFour" prefHeight="110.0" prefWidth="122.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="18.0">
                                  <graphic>
                                       <ImageView fitHeight="106.0" fitWidth="108.0">
                                           <image>
@@ -133,11 +100,11 @@
                               </Button>
                            </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                        <AnchorPane prefHeight="146.0" prefWidth="141.0" GridPane.rowIndex="4">
                            <children>
-                              <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleButtonThree" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                              <Button layoutY="30.0" mnemonicParsing="false" onAction="#handleButtonThree" prefHeight="110.0" prefWidth="119.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                   <graphic>
-                                      <ImageView fitHeight="101.0" fitWidth="102.0">
+                                      <ImageView fitHeight="101.0" fitWidth="100.0">
                                           <image>
                                               <Image url="@img/HiraganaVS.png" />
                                           </image>
@@ -146,22 +113,19 @@
                               </Button>
                            </children>
                         </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                        <AnchorPane prefHeight="31.0" prefWidth="151.0" />
+                        <Label text="Label" GridPane.rowIndex="2" />
+                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" textFill="WHITE">
+            <Label prefHeight="15.0" prefWidth="286.0" text="CHOOSE BETWEEN...MODE后面忘了" GridPane.rowIndex="1">
                <font>
-                  <Font name="Tahoma" size="17.0" />
+                  <Font name="System Bold Italic" size="13.0" />
                </font>
-               <graphic>
-                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="290.0" text="learnKana" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Mistral" size="40.0" />
-                     </font>
-                  </Label>
-               </graphic>
-            </Button>
+            </Label>
          </children>
       </GridPane>
    </children>

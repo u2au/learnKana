@@ -19,11 +19,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fitHeight="47.0" fitWidth="200.0" translateX="68.0">
+            <ImageView fx:id="myimage" fitHeight="47.0" fitWidth="200.0" translateX="68.0">
                <image>
                   <Image url="@img/logo.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="98.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>
