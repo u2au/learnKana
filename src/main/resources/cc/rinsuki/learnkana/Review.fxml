@@ -48,7 +48,7 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="questionLabel" alignment="CENTER" layoutX="168.0" layoutY="16.0" prefHeight="38.0" prefWidth="381.5" text="What is the pronunciation for this kana?" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="questionLabel" alignment="CENTER" layoutX="168.0" layoutY="16.0" prefHeight="38.0" prefWidth="381.5" text="Welcome! Kana will display below." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -57,9 +57,9 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                      <children>
-                        <Label fx:id="kanaLabel" alignment="CENTER" layoutX="16.0" layoutY="43.0" prefHeight="256.0" prefWidth="291.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;" text="^ ^" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="43.0">
+                        <Label fx:id="kanaLabel" alignment="CENTER" layoutX="16.0" layoutY="43.0" prefHeight="256.0" prefWidth="291.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;" text="^ ^" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="43.0">
                            <font>
-                              <Font size="175.0" />
+                              <Font size="160.0" />
                            </font>
                         </Label>
                      </children>
@@ -94,7 +94,7 @@
                               <Font size="40.0" />
                            </font>
                         </Label>
-                        <ProgressBar fx:id="progressBar" layoutX="68.0" layoutY="29.0" prefWidth="200.0" progress="0.0" style="-fx-background-color: blue;" translateY="-10.0" />
+                        <ProgressBar fx:id="progressBar" layoutX="68.0" layoutY="29.0" prefWidth="200.0" progress="0.0" style="-fx-background-radius: 30; -fx-border-color: #FFFFFF;" translateY="-10.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
