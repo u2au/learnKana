@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -36,8 +37,8 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="110.8" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="49.2" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="319.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
               </rowConstraints>
@@ -53,17 +54,16 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="23.0" layoutY="31.0" prefHeight="275.0" prefWidth="291.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="31.0">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="84.0" layoutY="-23.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                        <AnchorPane layoutX="20.0" layoutY="28.0" prefHeight="275.0" prefWidth="291.0" />
+                        <AnchorPane layoutX="20.0" layoutY="28.0" prefHeight="275.0" prefWidth="291.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="-3.0" prefHeight="286.0" prefWidth="300.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ScrollBar layoutX="283.0" layoutY="1.0" orientation="VERTICAL" prefHeight="286.0" prefWidth="15.0" />
+                           </children>
+                        </AnchorPane>
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="32.0" prefWidth="335.0" GridPane.rowIndex="3" />
@@ -72,6 +72,11 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
+                  <Button mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="182.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="2">
