@@ -44,7 +44,8 @@ public class SceneController {
 
     @FXML private TextField input;
     @FXML private Button nextButton,
-                         checkButton;
+                         checkButton,
+                         reportButton;
 
     private final String[] wrongKana = new String[71];
     private final String[] wrongPronunciation = new String[71];
@@ -324,15 +325,18 @@ public class SceneController {
     }
 
     @FXML
-    private void generateReport()
-    {
+    private void generateReport() {
         if (wrongKanaLabelText.equals(""))
+        {
             wrongKanaLabel.setText("Wow, you answered all kana correctly!");
+            reportButton.setDisable(true); // Disable the button after generating the report
+        }
 
         else
         {
             wrongKanaLabel.setText(wrongKanaLabelText);
             wrongKanaLabelText = "";
+            reportButton.setDisable(true); // Same as above
         }
 
     }
@@ -363,6 +367,7 @@ public class SceneController {
 
     public void switchToHomeScene(ActionEvent event) throws IOException
     {
+        reportButton.setDisable(false); // Set as default
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Home.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
