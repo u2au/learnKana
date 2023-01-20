@@ -55,7 +55,7 @@
                      <children>
                         <AnchorPane layoutX="20.0" layoutY="28.0" prefHeight="275.0" prefWidth="291.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
                            <children>
-                              <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="-3.0" prefHeight="286.0" prefWidth="285.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+                              <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="-3.0" prefHeight="318.0" prefWidth="285.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
