@@ -20,13 +20,14 @@ public class SceneController {
 
     // Initialization
     @FXML
-    Label startButton,
+    Label startButtonLabel,
           numOfAnsLabel,
           kanaLabel,
           kanaAnsLabel,
           ansFeedbackLabel,
           wrongKanaLabel,
-          questionLabel;
+          questionLabel,
+          bonusLabel;
 
     @FXML
     private ProgressBar progressBar;
@@ -254,7 +255,7 @@ public class SceneController {
                 ansFeedbackLabel.setText("Please press ENTER to jump to next kana.");
                 nextButton.setDisable(false);
                 checkButton.setDisable(false);
-                progressBar.setStyle("-fx-accent: orange;");
+                progressBar.setStyle("-fx-accent: #39C5BB;");
                 break;
 
             default:
@@ -303,48 +304,46 @@ public class SceneController {
     {
         mode = m;
         numOfKana = n;
-        startButton.setText("Let's review " + mn + "!");
+        startButtonLabel.setText("Let's review " + mn + "!");
     }
 
     @FXML
-    private void handleButtonOne()
+    private void handleButtonH()
     {
         setMode(1, 46, "Hiragana");
-        startButton.setDisable(false);
+        startButtonLabel.setDisable(false);
     }
 
     @FXML
-    private void handleButtonTwo() {
+    private void handleButtonK() {
         setMode(2, 46, "Katakana");
-        startButton.setDisable(false);
+        startButtonLabel.setDisable(false);
     }
 
     @FXML
-    private void handleButtonThree() {
+    private void handleButtonHVC() {
         setMode(3, 71, "Hiragana with Voiced Sounds");
-        startButton.setDisable(false);
+        startButtonLabel.setDisable(false);
     }
 
     @FXML
-    private void handleButtonFour() {
+    private void handleButtonKVC() {
         setMode(4, 71, "Katakana with Voiced Sounds");
-        startButton.setDisable(false);
+        startButtonLabel.setDisable(false);
     }
 
     @FXML
     private void generateReport() {
         if (wrongKanaLabelText.equals(""))
-        {
             wrongKanaLabel.setText("Wow, you answered all kana correctly!");
-            reportButton.setDisable(true); // Disable the button after generating the report
-        }
 
         else
         {
             wrongKanaLabel.setText(wrongKanaLabelText);
             wrongKanaLabelText = "";
-            reportButton.setDisable(true); // Same as above
         }
+
+        reportButton.setDisable(true); // Disable the button after generating the report
 
     }
 
@@ -372,15 +371,20 @@ public class SceneController {
         stage.show();
     }
 
-    public void switchToHomeScene(ActionEvent event) throws IOException
+    public void switchToModeSelectionScene(ActionEvent event) throws IOException
     {
-        reportButton.setDisable(false); // Set as default
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Home.fxml")));
+        reportButton.setDisable(true); // Set as default
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ModeSelection.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     // Switch between scenes END
+
+    public void helloWorld()
+    {
+        bonusLabel.setText("From the beginning, when we didn't\nknow what JavaFX was, to today's learnKana,\ncountless days and nights have brought\nus to fruition, although this program\nis still immature, thank you for using it :-)");
+    }
 
 }

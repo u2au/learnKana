@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.SceneController">
+<AnchorPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #39C5BB;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.SceneController">
    <children>
       <GridPane layoutX="74.0" layoutY="204.0" prefHeight="600.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -22,95 +22,51 @@
           <RowConstraints maxHeight="90.0" minHeight="2.0" prefHeight="59.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;">
-               <children>
-                  <Label alignment="CENTER" layoutX="153.0" layoutY="18.0" prefHeight="53.0" prefWidth="335.0" style="-fx-background-color: F8B195;" text="learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Jokerman" size="28.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
             <GridPane GridPane.rowIndex="1">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                  <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="250.0" minHeight="0.0" prefHeight="32.199987792968756" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="256.79998779296875" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="159.0" minHeight="0.0" prefHeight="26.999975585937477" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="27.800024414062477" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="250.0" minHeight="0.0" prefHeight="52.5" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="268.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="159.0" minHeight="0.0" prefHeight="123.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="questionLabel" alignment="CENTER" layoutX="168.0" layoutY="16.0" prefHeight="38.0" prefWidth="381.5" text="Welcome! Kana will display below." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="questionLabel" alignment="CENTER" layoutX="2.0" layoutY="16.0" prefHeight="53.0" prefWidth="335.0" text="Welcome! Kana will display below." textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Trebuchet MS Bold" size="17.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                  <AnchorPane prefHeight="335.0" prefWidth="335.0" GridPane.rowIndex="1">
                      <children>
-                        <Label fx:id="kanaLabel" alignment="CENTER" layoutX="16.0" layoutY="43.0" prefHeight="256.0" prefWidth="291.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;" text="^ ^" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="43.0">
+                        <Label fx:id="kanaLabel" alignment="CENTER" layoutX="60.0" layoutY="37.0" prefHeight="256.0" prefWidth="291.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;" text="Hi" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="37.0">
                            <font>
                               <Font size="160.0" />
                            </font>
                         </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
-                     <children>
-                        <TextField fx:id="input" alignment="CENTER" layoutX="24.0" onAction="#reviewKana" prefHeight="29.0" prefWidth="335.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane prefHeight="71.0" prefWidth="335.0" GridPane.rowIndex="1">
-                     <children>
-                        <Label fx:id="numOfAnsLabel" alignment="CENTER" layoutX="127.0" layoutY="6.0" prefHeight="46.0" prefWidth="335.0" text="No.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="kanaAnsLabel" alignment="CENTER" layoutX="215.0" layoutY="37.0" prefHeight="55.0" prefWidth="60.0" AnchorPane.bottomAnchor="229.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="37.0">
                            <font>
-                              <Font size="21.0" />
+                              <Font name="Comic Sans MS" size="40.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                  <AnchorPane prefHeight="48.0" prefWidth="335.0" GridPane.rowIndex="3">
                      <children>
-                        <Label fx:id="ansFeedbackLabel" alignment="CENTER" layoutX="160.0" layoutY="20.0" prefHeight="56.0" prefWidth="335.0" text="Press ENTER to jump to next kana." textFill="#000000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
+                        <TextField fx:id="input" alignment="CENTER" layoutX="100.0" layoutY="6.0" onAction="#reviewKana" prefHeight="25.0" prefWidth="135.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="6.0" />
+                        <ProgressBar fx:id="progressBar" layoutY="80.0" prefHeight="20.0" prefWidth="335.0" progress="0.0" style="-fx-background-radius: 30; -fx-border-color: #FFFFFF;" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="kanaAnsLabel" alignment="CENTER" layoutX="146.0" layoutY="33.0" prefHeight="99.0" prefWidth="335.0" text=" " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="ansFeedbackLabel" alignment="CENTER" layoutX="9.0" layoutY="11.0" prefHeight="35.0" prefWidth="317.0" text="Press ENTER to jump to next kana." textFill="WHITE" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0">
                            <font>
-                              <Font size="40.0" />
-                           </font>
-                        </Label>
-                        <ProgressBar fx:id="progressBar" layoutX="68.0" layoutY="29.0" prefWidth="200.0" progress="0.0" style="-fx-background-radius: 30; -fx-border-color: #FFFFFF;" translateY="-10.0" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Label alignment="CENTER" layoutX="96.0" layoutY="6.0" prefHeight="33.0" prefWidth="335.0" text="Review Mode" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="21.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
-                     <children>
-                        <Label alignment="CENTER" layoutX="106.0" layoutY="37.0" prefHeight="60.0" prefWidth="335.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font name="High Tower Text Italic" size="25.0" />
+                              <Font name="Trebuchet MS" size="16.0" />
                            </font>
                         </Label>
                      </children>
@@ -140,7 +96,7 @@
                      <children>
                         <Button fx:id="nextButton" layoutX="14.0" mnemonicParsing="false" onAction="#reviewKana" prefHeight="60.0" prefWidth="182.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Next!" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="16.0" />
+                              <Font name="Trebuchet MS" size="16.0" />
                            </font>
                         </Button>
                      </children>
@@ -156,6 +112,15 @@
                   </AnchorPane>
                </children>
             </GridPane>
+            <AnchorPane prefHeight="75.0" prefWidth="335.0">
+               <children>
+                  <Label fx:id="numOfAnsLabel" alignment="CENTER" layoutX="100.0" layoutY="8.0" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="No.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="8.0">
+                     <font>
+                        <Font name="Trebuchet MS Italic" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
          </children>
       </GridPane>
    </children>

@@ -10,76 +10,21 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.SceneController">
+<AnchorPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #39C5BB;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.rinsuki.learnkana.SceneController">
    <children>
+      <AnchorPane prefHeight="154.0" prefWidth="170.0" />
       <GridPane layoutX="74.0" layoutY="204.0" prefHeight="600.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="196.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="501.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="141.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="581.0" minHeight="10.0" prefHeight="423.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="65.0" minHeight="2.0" prefHeight="37.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E12885; -fx-background-radius: 30;">
-               <children>
-                  <Label alignment="CENTER" layoutX="153.0" layoutY="18.0" prefHeight="53.0" prefWidth="335.0" text="learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Apple Chancery" size="27.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <GridPane GridPane.rowIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="110.8" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="49.2" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="319.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <AnchorPane prefHeight="137.0" prefWidth="335.0">
-                     <children>
-                        <ImageView fitHeight="107.0" fitWidth="128.0" layoutX="102.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@img/thankyou.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                     <children>
-                        <AnchorPane layoutX="20.0" layoutY="28.0" prefHeight="275.0" prefWidth="291.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
-                           <children>
-                              <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="-3.0" prefHeight="318.0" prefWidth="285.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane prefHeight="32.0" prefWidth="335.0" GridPane.rowIndex="3" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="342.0" textAlignment="CENTER" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="reportButton" mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="164.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textFill="WHITE" translateX="82.0" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
-               </children>
-            </GridPane>
             <GridPane GridPane.rowIndex="2">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
@@ -88,16 +33,34 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="80.0" layoutY="-11.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="41.0" prefWidth="167.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Return Home!" textFill="WHITE" AnchorPane.bottomAnchor="10.999999999999993" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="-82.0" AnchorPane.topAnchor="7.0">
+                        <Button layoutX="181.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToModeSelectionScene" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Return Home!" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reportButton" alignment="CENTER" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="140.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="wrongKanaLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="423.0" prefWidth="335.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="200.0" fitWidth="200.0" scaleX="0.7" scaleY="0.7" scaleZ="0.7" translateX="68.0">
+               <image>
+                  <Image url="@img/fighting.png" />
+               </image>
+            </ImageView>
          </children>
       </GridPane>
    </children>
