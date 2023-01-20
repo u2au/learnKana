@@ -72,7 +72,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="182.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textFill="WHITE" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="164.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textFill="WHITE" translateX="82.0" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>

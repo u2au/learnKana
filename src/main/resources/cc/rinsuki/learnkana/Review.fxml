@@ -58,7 +58,7 @@
                      <children>
                         <Label fx:id="kanaLabel" alignment="CENTER" layoutX="169.0" layoutY="99.0" prefHeight="246.0" prefWidth="335.0" text="^ ^" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                            <font>
-                              <Font size="200.0" />
+                              <Font size="175.0" />
                            </font>
                         </Label>
                      </children>
