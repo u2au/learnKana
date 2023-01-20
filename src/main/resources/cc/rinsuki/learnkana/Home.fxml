@@ -122,7 +122,7 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                              <Button mnemonicParsing="false" onAction="#handleButtonFour" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                  <graphic>
                                       <ImageView fitHeight="106.0" fitWidth="108.0">
                                           <image>
