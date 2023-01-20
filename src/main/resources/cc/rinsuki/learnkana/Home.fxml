@@ -23,23 +23,14 @@
           <RowConstraints maxHeight="65.0" minHeight="2.0" prefHeight="37.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;">
-               <children>
-                  <Label alignment="CENTER" layoutX="153.0" layoutY="18.0" prefHeight="53.0" prefWidth="335.0" text="learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Apple Chancery" size="27.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Button layoutX="140.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Tahoma" size="17.0" />
                      </font>
                      <graphic>
-                        <Label fx:id="startButton" alignment="CENTER" disable="true" prefHeight="41.0" prefWidth="335.0" text="Please choose one review mode first." textAlignment="CENTER" textFill="WHITE">
+                        <Label fx:id="startButton" alignment="CENTER" disable="true" prefHeight="18.0" prefWidth="290.0" text="Please choose one review mode first." textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -62,14 +53,14 @@
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <children>
-                        <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="68.0" layoutY="17.0" scaleX="1.8" scaleY="1.8" scaleZ="1.8">
+                        <ImageView fitHeight="74.0" fitWidth="190.0" layoutX="76.0" layoutY="25.0" scaleX="1.8" scaleY="1.8" scaleZ="1.8">
                            <image>
                               <Image url="@img/welcome.png" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="335.0" text="Let's review kana by typing its pronunciation!" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="38.0" prefWidth="335.0" text="Let's review kana by typing its pronunciation!" GridPane.rowIndex="2" />
                   <Label alignment="CENTER" prefHeight="28.0" prefWidth="335.0" text="Kindly click your desirable review mode." GridPane.rowIndex="3" />
                   <GridPane GridPane.rowIndex="4">
                     <columnConstraints>
@@ -95,9 +86,9 @@
                         </Label>
                         <AnchorPane prefHeight="92.0" prefWidth="168.0" GridPane.rowIndex="1">
                            <children>
-                              <Button layoutX="81.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Button layoutX="43.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                   <graphic>
-                                      <ImageView fitHeight="130" fitWidth="130" onMouseClicked="#handleButtonOne" GridPane.rowIndex="1">
+                                      <ImageView fitHeight="102.0" fitWidth="100.0" onMouseClicked="#handleButtonOne" GridPane.rowIndex="1">
                                           <image>
                                               <Image url="@img/Hiragana.png" />
                                           </image>
@@ -106,11 +97,11 @@
                               </Button>
                            </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <AnchorPane prefHeight="170.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonTwo" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonTwo" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                   <graphic>
-                                      <ImageView fitHeight="130" fitWidth="130" GridPane.rowIndex="1">
+                                      <ImageView fitHeight="101.0" fitWidth="106.0" GridPane.rowIndex="1">
                                           <image>
                                               <Image url="@img/Katakana.png" />
                                           </image>
@@ -121,32 +112,32 @@
                         </AnchorPane>
                         <Label alignment="CENTER" prefHeight="17.0" prefWidth="224.0" text="Hiragana with Voiced Sounds" GridPane.rowIndex="3">
                            <font>
-                              <Font size="12.0" />
+                              <Font size="11.0" />
                            </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="17.0" prefWidth="224.0" text="Katakana with Voiced Sounds" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
-                              <Font size="12.0" />
+                              <Font size="11.0" />
                            </font>
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <Button layoutX="32.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleButtonFour" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                  <graphic>
-                                      <ImageView fitHeight="130" fitWidth="130">
+                              <Button mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                 <graphic>
+                                      <ImageView fitHeight="101.0" fitWidth="106.0">
                                           <image>
                                               <Image url="@img/KatakanaVS.png" />
                                           </image>
                                       </ImageView>
-                                  </graphic>
+                                 </graphic>
                               </Button>
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                            <children>
-                              <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleButtonThree" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleButtonThree" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                   <graphic>
-                                      <ImageView fitHeight="130" fitWidth="130">
+                                      <ImageView fitHeight="101.0" fitWidth="102.0">
                                           <image>
                                               <Image url="@img/HiraganaVS.png" />
                                           </image>
@@ -159,6 +150,18 @@
                   </GridPane>
                </children>
             </GridPane>
+            <Button mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="41.0" prefWidth="335.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="17.0" />
+               </font>
+               <graphic>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="290.0" text="learnKana" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Button>
          </children>
       </GridPane>
    </children>

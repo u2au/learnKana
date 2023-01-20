@@ -44,7 +44,7 @@
                <children>
                   <AnchorPane prefHeight="137.0" prefWidth="335.0">
                      <children>
-                        <ImageView fitHeight="143.0" fitWidth="181.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="107.0" fitWidth="128.0" layoutX="102.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@img/thankyou.png" />
                            </image>
@@ -53,15 +53,21 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="91.0" layoutY="56.0" prefHeight="316.0" prefWidth="335.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="23.0" layoutY="31.0" prefHeight="275.0" prefWidth="291.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="31.0">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
+                        <Button layoutX="84.0" layoutY="-23.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutX="20.0" layoutY="28.0" prefHeight="275.0" prefWidth="291.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="32.0" prefWidth="335.0" GridPane.rowIndex="3" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="342.0" text="Click 'Report' to generate your kana report!" textAlignment="CENTER" GridPane.rowIndex="1">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="342.0" textAlignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -79,22 +85,14 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="57.0" layoutY="2.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Report" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Button layoutX="80.0" layoutY="-11.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="41.0" prefWidth="167.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Return Home!" textFill="WHITE" AnchorPane.bottomAnchor="10.999999999999993" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="-80.0" AnchorPane.topAnchor="-11.0">
                            <font>
-                              <Font size="23.0" />
+                              <Font size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                     <children>
-                        <Button layoutX="40.0" layoutY="2.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="41.0" prefWidth="167.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Return Home!" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="23.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
          </children>
