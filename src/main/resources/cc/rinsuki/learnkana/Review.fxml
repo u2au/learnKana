@@ -23,9 +23,9 @@
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;">
                <children>
-                  <Label alignment="CENTER" layoutX="153.0" layoutY="18.0" prefHeight="53.0" prefWidth="335.0" text="learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Label alignment="CENTER" layoutX="153.0" layoutY="18.0" prefHeight="53.0" prefWidth="335.0" style="-fx-background-color: F8B195;" text="learnKana" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
-                        <Font name="Apple Chancery" size="27.0" />
+                        <Font name="Jokerman" size="28.0" />
                      </font>
                   </Label>
                </children>
@@ -37,10 +37,10 @@
               <rowConstraints>
                   <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="300.0" minHeight="0.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="222.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="159.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="250.0" minHeight="0.0" prefHeight="32.199987792968756" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="256.79998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="159.0" minHeight="0.0" prefHeight="26.999975585937477" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="27.800024414062477" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
               </rowConstraints>
@@ -56,9 +56,9 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                      <children>
-                        <Label fx:id="kanaLabel" alignment="CENTER" layoutX="169.0" layoutY="99.0" prefHeight="246.0" prefWidth="335.0" text="^ ^" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                        <Label fx:id="kanaLabel" alignment="CENTER" layoutX="22.0" layoutY="43.0" prefHeight="256.0" prefWidth="291.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;" text="^ ^" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="43.0">
                            <font>
-                              <Font size="200.0" />
+                              <Font size="175.0" />
                            </font>
                         </Label>
                      </children>
