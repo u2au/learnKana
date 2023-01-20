@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -54,14 +53,13 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <AnchorPane layoutX="20.0" layoutY="28.0" prefHeight="275.0" prefWidth="291.0" style="-fx-background-color: #FFFFFF;">
+                        <AnchorPane layoutX="20.0" layoutY="28.0" prefHeight="275.0" prefWidth="291.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
                            <children>
-                              <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="-3.0" prefHeight="286.0" prefWidth="300.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+                              <Label fx:id="wrongKanaLabel" alignment="CENTER" layoutX="-3.0" prefHeight="286.0" prefWidth="285.0" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="15.0" />
                                  </font>
                               </Label>
-                              <ScrollBar layoutX="283.0" layoutY="1.0" orientation="VERTICAL" prefHeight="286.0" prefWidth="15.0" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -72,7 +70,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="164.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textFill="WHITE" translateX="82.0" GridPane.rowIndex="1">
+                  <Button fx:id="reportButton" mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="164.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textFill="WHITE" translateX="82.0" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -90,9 +88,9 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="80.0" layoutY="-11.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="41.0" prefWidth="167.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Return Home!" textFill="WHITE" AnchorPane.bottomAnchor="10.999999999999993" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="-80.0" AnchorPane.topAnchor="-11.0">
+                        <Button layoutX="80.0" layoutY="-11.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="41.0" prefWidth="167.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Return Home!" textFill="WHITE" AnchorPane.bottomAnchor="10.999999999999993" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="-82.0" AnchorPane.topAnchor="7.0">
                            <font>
-                              <Font size="18.0" />
+                              <Font size="17.0" />
                            </font>
                         </Button>
                      </children>

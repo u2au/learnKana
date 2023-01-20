@@ -86,7 +86,7 @@
                         </Label>
                         <AnchorPane prefHeight="92.0" prefWidth="168.0" GridPane.rowIndex="1">
                            <children>
-                              <Button layoutX="43.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                              <Button layoutX="43.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                   <graphic>
                                       <ImageView fitHeight="102.0" fitWidth="100.0" onMouseClicked="#handleButtonOne" GridPane.rowIndex="1">
                                           <image>
@@ -97,9 +97,9 @@
                               </Button>
                            </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="170.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <AnchorPane prefHeight="170.0" prefWidth="196.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonTwo" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                              <Button layoutX="26.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonTwo" prefHeight="136.0" prefWidth="167.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                   <graphic>
                                       <ImageView fitHeight="101.0" fitWidth="106.0" GridPane.rowIndex="1">
                                           <image>
@@ -122,9 +122,9 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#handleButtonOne" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                              <Button mnemonicParsing="false" onAction="#handleButtonFour" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                  <graphic>
-                                      <ImageView fitHeight="101.0" fitWidth="106.0">
+                                      <ImageView fitHeight="106.0" fitWidth="108.0">
                                           <image>
                                               <Image url="@img/KatakanaVS.png" />
                                           </image>
@@ -135,7 +135,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                            <children>
-                              <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleButtonThree" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #86CECB;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                              <Button layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleButtonThree" prefHeight="136.0" prefWidth="168.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                   <graphic>
                                       <ImageView fitHeight="101.0" fitWidth="102.0">
                                           <image>

@@ -48,9 +48,9 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <Label fx:id="questionLabel" alignment="CENTER" layoutX="168.0" layoutY="16.0" prefHeight="38.0" prefWidth="381.5" text="What is the pronunciation for this kana?" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label fx:id="questionLabel" alignment="CENTER" layoutX="168.0" layoutY="16.0" prefHeight="38.0" prefWidth="381.5" text="What is the pronunciation for this kana?" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="14.0" />
                            </font>
                         </Label>
                      </children>
@@ -66,7 +66,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
                      <children>
-                        <TextField fx:id="input" alignment="CENTER" layoutX="24.0" onAction="#reviewKana" prefHeight="29.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <TextField fx:id="input" alignment="CENTER" layoutX="24.0" onAction="#reviewKana" prefHeight="29.0" prefWidth="335.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="71.0" prefWidth="335.0" GridPane.rowIndex="1">
