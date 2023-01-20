@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -26,6 +27,9 @@ public class SceneController {
           ansFeedbackLabel,
           wrongKanaLabel,
           questionLabel;
+
+    @FXML
+    private ProgressBar progressBar;
 
     private static int mode,
                        numOfKana,
@@ -205,6 +209,7 @@ public class SceneController {
             else
                 // Save kana and pronunciation information
                 wrongKanaLabelText += (wrongKana[numOfWrongKana] + " (" + wrongPronunciation[numOfWrongKana++] + ")\n");
+
         }
 
         existedKana = false; // Restore existing status
@@ -227,6 +232,7 @@ public class SceneController {
                     feedbackText = "Incorrect. Answer for " + kana + " is " + kanaAnswer[whichKana] + ".";
                     ansFeedbackLabel.setText(feedbackText);
                     checkKana();
+                    progressBar.setProgress(((double)(numOfWrongKana) / 15));
                 }
 
                 else
@@ -247,6 +253,7 @@ public class SceneController {
                 ansFeedbackLabel.setText("Please press ENTER to jump to next kana.");
                 nextButton.setDisable(false);
                 checkButton.setDisable(false);
+                progressBar.setStyle("-fx-accent: orange;");
                 break;
 
             default:

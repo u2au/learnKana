@@ -157,7 +157,7 @@
                <graphic>
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="290.0" text="learnKana" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Mistral" size="40.0" />
                      </font>
                   </Label>
                </graphic>
