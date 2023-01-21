@@ -58,7 +58,10 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="48.0" prefWidth="335.0" GridPane.rowIndex="3">
                      <children>
-                        <TextField fx:id="input" alignment="CENTER" layoutX="100.0" layoutY="6.0" onAction="#reviewKana" prefHeight="25.0" prefWidth="135.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="6.0" />
+                        <TextField fx:id="input" alignment="CENTER" layoutX="100.0" layoutY="6.0" onAction="#reviewKana" prefHeight="29.0" prefWidth="135.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="6.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="13.0" />
+                           </font></TextField>
                         <ProgressBar fx:id="progressBar" layoutY="80.0" prefHeight="20.0" prefWidth="335.0" progress="0.0" style="-fx-background-radius: 30; -fx-border-color: #FFFFFF;" />
                      </children>
                   </AnchorPane>
@@ -87,25 +90,25 @@
                      <children>
                         <Button fx:id="checkButton" disable="true" layoutX="57.0" layoutY="18.0" mnemonicParsing="false" onAction="#showAns" prefHeight="60.0" prefWidth="168.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Check!" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="16.0" />
+                              <Font name="Trebuchet MS" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
-                        <Button fx:id="nextButton" layoutX="14.0" mnemonicParsing="false" onAction="#reviewKana" prefHeight="60.0" prefWidth="182.0" style="-fx-background-color: #86CECB; -fx-background-radius: 30;" text="Next!" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                        <Button fx:id="nextButton" layoutX="14.0" mnemonicParsing="false" onAction="#reviewKana" prefHeight="60.0" prefWidth="182.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Next!" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Trebuchet MS" size="16.0" />
+                              <Font name="Trebuchet MS" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button layoutX="29.0" layoutY="18.0" mnemonicParsing="false" onAction="#switchToReportScene" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Finish" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                        <Button layoutX="29.0" layoutY="18.0" mnemonicParsing="false" onAction="#switchToReportScene" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Finish!" textFill="#39c5bb" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="16.0" />
+                              <Font name="Trebuchet MS" size="18.0" />
                            </font>
                         </Button>
                      </children>

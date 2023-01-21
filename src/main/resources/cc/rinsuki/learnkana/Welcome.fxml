@@ -25,12 +25,12 @@
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="47.0" fitWidth="200.0" layoutX="68.0" layoutY="167.0">
+                  <ImageView fitHeight="47.0" fitWidth="200.0" layoutX="68.0" layoutY="182.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5">
                      <image>
                         <Image url="@img/logo.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="reportButton" layoutX="68.0" layoutY="165.0" mnemonicParsing="false" onAction="#helloWorld" opacity="0.0" prefHeight="50.0" prefWidth="200.0" />
+                  <Button fx:id="reportButton" layoutX="18.0" layoutY="170.0" mnemonicParsing="false" onAction="#helloWorld" opacity="0.0" prefHeight="71.0" prefWidth="300.0" />
                   <Text fill="WHITE" layoutX="13.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Japanese Fifty Sounds Chart Review Tool">
                      <font>
                         <Font name="Trebuchet MS Bold" size="16.0" />

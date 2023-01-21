@@ -38,9 +38,9 @@
             </AnchorPane>
             <AnchorPane prefHeight="85.0" prefWidth="335.0" GridPane.rowIndex="1">
                <children>
-                  <Text fill="WHITE" layoutX="43.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Which review mode do you prefer?">
+                  <Text fill="WHITE" layoutX="30.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Which review mode do you prefer?">
                      <font>
-                        <Font name="Trebuchet MS" size="16.0" />
+                        <Font name="Trebuchet MS Bold" size="16.0" />
                      </font>
                   </Text>
                   <Button layoutX="19.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleButtonH" prefHeight="110.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" AnchorPane.leftAnchor="20.0">

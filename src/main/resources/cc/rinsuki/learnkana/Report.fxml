@@ -19,8 +19,8 @@
         </columnConstraints>
         <rowConstraints>
             <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="141.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="581.0" minHeight="10.0" prefHeight="423.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="65.0" minHeight="2.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="581.0" minHeight="10.0" prefHeight="389.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="71.0" minHeight="2.0" prefHeight="71.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <GridPane GridPane.rowIndex="2">
@@ -33,14 +33,14 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="181.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToModeSelectionScene" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #BEC8D1; -fx-background-radius: 30;" text="Return Home!" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                        <Button layoutX="181.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToModeSelectionScene" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Return Home!" textFill="#39c5bb" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0">
                            <font>
-                              <Font size="17.0" />
+                              <Font name="Trebuchet MS" size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="reportButton" alignment="CENTER" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="140.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="0.0">
+                        <Button fx:id="reportButton" alignment="CENTER" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="42.0" prefWidth="140.0" style="-fx-background-color: #373B3E; -fx-background-radius: 30;" text="Get My Report" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="181.0" AnchorPane.topAnchor="10.0">
                            <font>
-                              <Font size="17.0" />
+                              <Font name="Trebuchet MS" size="18.0" />
                            </font>
                         </Button>
                      </children>
@@ -49,18 +49,26 @@
             </GridPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Label fx:id="wrongKanaLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="423.0" prefWidth="335.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+                  <Label fx:id="wrongKanaLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="353.0" prefWidth="255.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Kana report will appear here." textAlignment="CENTER" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <ImageView fitHeight="200.0" fitWidth="200.0" scaleX="0.7" scaleY="0.7" scaleZ="0.7" translateX="68.0">
-               <image>
-                  <Image url="@img/fighting.png" />
-               </image>
-            </ImageView>
+            <AnchorPane prefHeight="140.0" prefWidth="238.0">
+               <children>
+                  <AnchorPane layoutX="90.0" layoutY="14.0" prefHeight="130.0" prefWidth="148.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                     <children>
+                        <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="13.0">
+                           <image>
+                              <Image url="@img/fighting.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
          </children>
       </GridPane>
    </children>
