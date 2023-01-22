@@ -48,7 +48,8 @@ public class SceneController {
                           wrongKanaLabelText = "";
 
     @FXML private TextField input;
-    @FXML private Button nextButton,
+    @FXML private Button startButton,
+                         nextButton,
                          checkButton,
                          reportButton;
 
@@ -311,25 +312,25 @@ public class SceneController {
     private void handleButtonH()
     {
         setMode(1, 46, "Hiragana");
-        startButtonLabel.setDisable(false);
+        startButton.setDisable(false);
     }
 
     @FXML
     private void handleButtonK() {
         setMode(2, 46, "Katakana");
-        startButtonLabel.setDisable(false);
+        startButton.setDisable(false);
     }
 
     @FXML
     private void handleButtonHVC() {
         setMode(3, 71, "Hiragana with Voiced Sounds");
-        startButtonLabel.setDisable(false);
+        startButton.setDisable(false);
     }
 
     @FXML
     private void handleButtonKVC() {
         setMode(4, 71, "Katakana with Voiced Sounds");
-        startButtonLabel.setDisable(false);
+        startButton.setDisable(false);
     }
 
     @FXML

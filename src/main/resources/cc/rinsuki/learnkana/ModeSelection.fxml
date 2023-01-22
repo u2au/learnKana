@@ -114,7 +114,7 @@
                         </Text>
                      </children>
                   </TextFlow>
-                  <Button layoutX="9.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="53.0" prefWidth="316.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" textFill="#39c5bb">
+                  <Button fx:id="startButton" disable="true" layoutX="9.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchToReviewScene" prefHeight="53.0" prefWidth="316.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" textFill="#39c5bb">
                      <font>
                         <Font name="Trebuchet MS Italic" size="17.0" />
                      </font>
