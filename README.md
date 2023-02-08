@@ -19,4 +19,4 @@ After a year, I rewrote it in Java and redesigned it with a more user-friendly i
 ## How to use?
 You may need an IDE with Java support and JavaFX configured successfully.
 
-Assuming you're using IntelliJ IDEA, kindly locate to <code>src/main/java/cc/rinsuki/learnkana/Home.java</code> to start the program.
+Assuming you're using IntelliJ IDEA, kindly locate to <code>src/main/java/cc/rinsuki/learnkana/Home.java</code> to start.
